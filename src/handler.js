@@ -1,6 +1,13 @@
 const { nanoid } = require('nanoid');
 
 const notes = require('./notes');
+
+const getPageSucces = () => ({
+  status: 'success',
+  data:
+    'hello that is work',
+});
+
 const addNoteHandler = (request, h) => {
   const { title, tags, body } = request.payload;
   const id = nanoid(16);
@@ -124,6 +131,7 @@ const deleteNoteByIdHandler = (request, h) => {
 };
 
 module.exports = {
+  getPageSucces,
   addNoteHandler,
   getAllNotesHandler,
   getNoteByIdHandler,
