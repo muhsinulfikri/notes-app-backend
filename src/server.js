@@ -4,7 +4,7 @@ const routes = require('./routes');
 const init = async () => {
   const server = Hapi.server({
     port: 5001,
-    host: 'localhost',
+    host: 'https://notes-app-backend-vert.vercel.app/',
     routes: {
       cors: {
         origin: ['*'],
